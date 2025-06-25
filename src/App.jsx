@@ -12,7 +12,7 @@ function App() {
     setReview(text);
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/sentiment", {
+      const res = await fetch("https://sentiment-analysis-backend-uux2.onrender.com/api/sentiment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ review: text }),
